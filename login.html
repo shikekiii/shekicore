@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+
+   
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login</title>
+        <link rel="stylesheet" href="login.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+
+
+   
+</head>
+    
+<body>
+
+
+    <div class="wrapper">
+        <form action="">
+            <h1>Login</h1>
+            <div class="input-box">
+                <input type="text" id="username" placeholder="Username | Ex: Shekicute" required>
+                <i class='bx bxs-user'></i>
+            </div>
+            <div class="input-box">
+                <input type="password" id="password" placeholder="Password | Ex: Korique123 " required>
+                <i class='bx bxs-lock-alt'></i>
+            </div>
+            <div class="error" id="error-msg"></div>
+
+            <button type="button" onclick="validateLogin()">Login</button>
+        </form>
+    </div>
+
+    <script>
+        function validateLogin() {
+            // Default username and password (you can change these values)
+            const validUsername = "Shekicute";
+            const validPassword = "Korique123";
+
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+            const errorMsg = document.getElementById("error-msg");
+
+            if (username === validUsername && password === validPassword) {
+                // Redirect to the Home Page if the login is successful
+                window.location.href = "index.html"; // Replace with your actual homepage file
+            } else {
+                // Display error message
+                errorMsg.innerText = "Invalid username or password.";
+            }
+        }
+    </script>
+
+
+
+</body>
+</html>
